@@ -50,6 +50,7 @@ type Configuration struct {
 	RetriesConfiguration         ClientRetriesConfiguration
 	HTTPClient                   *http.Client
 	InsecureSkipServerNameVerify bool
+	OverrideProtection           bool
 }
 
 func NewConfiguration() *Configuration {
