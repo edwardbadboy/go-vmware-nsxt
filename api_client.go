@@ -615,9 +615,11 @@ func (c *APIClient) prepareRequest(
 	// Add the user agent to the request.
 	localVarRequest.Header.Add("User-Agent", c.cfg.UserAgent)
 
-	if c.cfg.OverrideProtection && (method == http.MethodPatch || method == http.MethodDelete) {
+	fmt.Println("method", method, "c.cfg.OverrideProtection", c.cfg.OverrideProtection)
+	if c.cfg.OverrideProtection {
 		localVarRequest.Header.Add("X-Allow-Override", "true")
 	}
+	fmt.Println("localVarRequest.Header", localVarRequest.Header)
 
 	// Walk through any authentication.
 	if ctx != nil {
