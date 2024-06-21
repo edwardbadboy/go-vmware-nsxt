@@ -64,4 +64,6 @@ type ClusterControlPlane struct {
 	VhcPath string `json:"vhc_path,omitempty"`
 	// certificate for this cluster control plane
 	Certificate string `json:"certificate,omitempty"`
+	// Node type.
+	NodeType string `json:"node_type,omitempty"`
 }
